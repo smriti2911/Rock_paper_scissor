@@ -24,11 +24,15 @@ Scissors='''
     VK      (____)
       ---.__(___)
 '''
-game_image =[Rock, Paper, Scissors]
+game_image =[Rock, Paper, Scissors, "NO again"]
 
 while True:
-    user_choice= int(input("what do you choose? type 0 for rock, 1 for paper, 2 for scissors\n"))
-    if user_choice >=3 or user_choice<0:
+    user_choice= int(input("what do you choose? type 0 for rock, 1 for paper, 2 for scissors, 3 for NO again\n"))
+    
+    if user_choice == 3:
+        print("Thank you for play with me")
+        break
+    elif user_choice >=4 or user_choice<0:
         print("you typed an invalid number, You lose!")
     else:
         print(game_image[user_choice])
@@ -45,6 +49,7 @@ while True:
             print("you win!")
         elif computer_choice== user_choice:
             print(" it's a draw")
+            
+            
         
-           
         
